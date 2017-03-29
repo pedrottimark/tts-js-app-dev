@@ -1,2 +1,3 @@
-# tts-js-app-dev
-Example files for JavaScript Application Development
+# JavaScript Application Development
+
+Each directory has example files from a class on Thursday night.

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>Lesson 2: Analogy of table to object</title>
+<style>
+* {
+border: 0;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: "Helvetica Neue", sans-serif;
+line-height: 1.5;
+color: hsl(0, 0%, 20%); /* gray */
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+caption {
+white-space: nowrap;
+}
+thead th {
+  font-weight: normal;
+}
+th {
+text-align: left;
+}
+caption, th, td {
+padding-left: 0.5rem;
+padding-right: 0.5rem;
+}
+</style>
+</head>
+<body>
+<table>
+<caption>course students and their computers</caption>
+<thead>
+<tr>
+<th scope="col">name</th>
+<th scope="col">OS</th>
+<th scope="col">type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Steve</th>
+<td>Linux</td>
+<td>laptop</td>
+</tr>
+<tr>
+<th scope="row">Katy</th>
+<td>OSX</td>
+<td>macbook</td>
+</tr>
+<tr>
+<th scope="row">Chuck</th>
+<td>OSX</td>
+<td>macbook</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
