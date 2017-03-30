@@ -5,5 +5,8 @@ var course = {
 };
 
 console.log('course.name', course.name);
-var key = 'name'
+
+// The normalized example illustrates a realistic situation
+// when you need to refer to property with bracket notation.
+var key = 'name';
 console.log('course[key]', course[key]);
