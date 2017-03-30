@@ -10,6 +10,13 @@
 var course = {
   name: 'JavaScript Applications',
   awesome: true,
+  preReqs: {
+    skills: ['html', 'css', 'git'],
+    equipment: {
+      laptop: true,
+      OSOptions: ['linux', 'osx']
+    }
+  },
   teachers: ['Assaf', 'Shane'],
   students: [
     {
@@ -33,13 +40,5 @@ var course = {
         type: 'macbook'
       }
     }
-
-  ],
-  preReqs : {
-    skills : ['html', 'css', 'git'],
-    equipment: {
-      laptop: true,
-      OSOptions: ['linux', 'osx']
-    }
-  }
+  ]
 };
