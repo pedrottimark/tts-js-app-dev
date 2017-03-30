@@ -3,7 +3,7 @@ console.log('array before assignment:', teachers);
 
 teachers[4] = 'Cam Newton';
 console.log('array after assignment: ', teachers)
-console.log('array length:           ', teachers.length);
+console.log('array length property:  ', teachers.length);
 console.log('item types:             ',
   typeof teachers[0],
   typeof teachers[1],

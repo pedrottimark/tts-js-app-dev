@@ -6,3 +6,4 @@ var shifted = teachers.shift();
 
 console.log('shift returns the first item:', shifted);
 console.log('array after shift:           ', teachers);
+console.log('array length property:       ', teachers.length);
