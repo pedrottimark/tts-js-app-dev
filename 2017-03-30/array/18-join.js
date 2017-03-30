@@ -2,6 +2,8 @@ teachers = ['Assaf', 'Shane', 'Zack'];
 
 console.log('array:      ', teachers);
 
-var joined = teachers.join(', ');
-
-console.log('array.join()', joined);
+// More recommended because more flexible to join an array
+console.log("join()      ", teachers.join());
+console.log("join(', ')  ", teachers.join(', '));
+console.log("join(' ')   ", teachers.join(' '));
+console.log("join('')    ", teachers.join(''));
