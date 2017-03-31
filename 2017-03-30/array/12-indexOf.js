@@ -1,4 +1,4 @@
-const teachers = ['Assaf', 'Shane', 'Zack'];
+var teachers = ['Assaf', 'Shane', 'Zack'];
 
 console.log('array items:  ', teachers);
 console.log('indexOf Assaf:', teachers.indexOf('Assaf'));
