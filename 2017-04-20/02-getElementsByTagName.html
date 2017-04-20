@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>getElementsByTagName</title>
+<link rel="stylesheet" href="todos.css" />
+</head>
+<body>
+<div id="root">
+<section>
+<h3>Todo list</h3>
+<ul id="todos">
+<li class="completed">Find elements</li>
+<li class="uncompleted">Attach listeners</li>
+<li class="uncompleted">Do things</li>
+</ul>
+</section>
+</div>
+</body>
+<script>
+function onClickTodoItem(event) {
+  var element = event.target;
+  element.className = element.className === 'uncompleted'
+    ? 'completed'
+    : 'uncompleted';
+}
+
+var items = document.getElementsByTagName('li');
+Array.prototype.forEach.call(items, function (element, i) {
+  console.log(i, element.textContent);
+  element.addEventListener('click', onClickTodoItem);
+});
+console.log(items.length);
+</script>
+</html>

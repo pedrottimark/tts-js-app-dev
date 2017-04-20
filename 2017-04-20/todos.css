@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 1em;
+}
+
+#todos {
+  padding: 1em;
+  line-height: 1.5em;
+}
+
+#todos li {
+  cursor: default;
+}
+
+#todos li.completed {
+  color: #808080; /* gray */
+  text-decoration: line-through;
+}
+
+#todos.completed li.uncompleted,
+#todos.uncompleted li.completed {
+  display: none;
+}
+
+#filter {
+  display: flex;
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #cccccc;
+}
+
+#filter li + li {
+  margin-left: 1em;
+}
+
+#filter label {
+  margin-left: 0.5em;
+}
+
+#add {
+  line-height: 1.5em;
+  border-top: 1px solid #cccccc;
+  padding-top: 1em;
+}
+
+#add button {
+  margin-left: 1em;
+}
