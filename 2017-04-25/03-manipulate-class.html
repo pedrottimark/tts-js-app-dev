@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>03-manipulate-class</title>
+<style>
+.completed {
+  color: #666666;
+  text-decoration: line-through;
+}
+</style>
+</head>
+<body>
+<div id="root">
+<ul>
+<li class="completed">Write less, do more</li>
+<li>Find something</li>
+<li>Do something</li>
+</ul>
+</div>
+<script src="jquery.js"></script>
+<script>
+var $items = $('li');
+
+$items.removeClass('completed');
+$items.each(function (i) {
+  console.log(i, $(this).hasClass('completed'));
+});
+console.log();
+
+$items.addClass('completed');
+$items.each(function (i) {
+  console.log(i, $(this).hasClass('completed'));
+});
+console.log();
+
+var todos = [
+  {
+    text: 'Write less, do more',
+    completed: true,
+  },
+  {
+    text: 'Find something',
+    completed: false,
+  },
+  {
+    text: 'Do something',
+    completed: false,
+  },
+];
+$items.each(function (i) {
+  $(this).toggleClass('completed', todos[i].completed);
+  console.log(i, $(this).hasClass('completed'));
+});
+</script>
+</body>
+</html>

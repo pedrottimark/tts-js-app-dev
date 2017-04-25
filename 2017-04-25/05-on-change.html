@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>05-on-change</title>
+<style>
+fieldset { border-style: none; }
+label + label { margin-left: 1.5em; }
+input { margin-right: 0.5em;}
+</style>
+</head>
+<body>
+<div id="root" class="TodoApp">
+<form name="filter">
+<label><input type="radio" name="filter" value="all" checked="checked" />all</label>
+<label><input type="radio" name="filter" value="uncompleted" />uncompleted</label>
+<label><input type="radio" name="filter" value="completed" />completed</label>
+</form>
+</div>
+<script src="jquery.js"></script>
+<script>
+function onChange(event) {
+  console.log(event.target.value);
+}
+
+$('input[type="radio"]').on('change', onChange);
+</script>
+</body>
+</html>
