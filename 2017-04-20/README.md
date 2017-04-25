@@ -51,16 +51,16 @@ function updateCount() {
 
 The list does not update when the document changes.
 
-## Attach listeners
+## Add listeners
 
-An “unobtrusive JavaScript” application attaches event listeners so people can interact with it.
+An “unobtrusive JavaScript” application adds event listeners so people can interact with it.
 
 ```js
 var todo = document.getElementById('todo');
 var items = todoList.getElementsByTagName('li');
 
 Array.prototype.forEach.call(items, function (item) {
-  item.attachEventListener('click', function (event) {
+  item.addEventListener('click', function (event) {
     // Because the “target” element is a property of the event object,
     // you might not need to bind the callback function to a context.
     console.log(event.target.textContent);

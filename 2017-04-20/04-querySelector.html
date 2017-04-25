@@ -18,6 +18,8 @@
 </div>
 </body>
 <script>
+'use strict';
+
 var count = document.querySelector('#count');
 var itemsUncompleted = document.getElementsByClassName('uncompleted');
 
@@ -39,7 +41,7 @@ function onClickTodoItem(event) {
   update();
 }
 
-var items = todos.querySelectorAll('#todos li');
+var items = document.querySelectorAll('#todos li');
 Array.prototype.forEach.call(items, function (item) {
   item.addEventListener('click', onClickTodoItem);
 });

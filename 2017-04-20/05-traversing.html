@@ -28,6 +28,9 @@ Array.from(ul.children).forEach(function (child, i) {
   console.log(i, child.textContent);
 });
 console.log(ul.children.length);
+Array.prototype.forEach.call(ul.children, function (child, i) {
+  console.log(i, child.innerHTML, child.className);
+});
 
 var li2 = document.querySelector('li:nth-child(2)');
 console.log('tag of parent:           ', li2.parentElement.tagName);
