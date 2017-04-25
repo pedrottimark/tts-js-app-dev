@@ -20,7 +20,7 @@ The `jQuery` or `$` function is a virtual constructor.
 * `$(markupString)` creates elements: `$('<li></li>')` or `$('<input type="text"/>')`
 * `$(element)` wraps a DOM element: `$(event.target)` or `$(this)`
 
-It returns an [array-like object](https://learn.jquery.com/using-jquery-core/jquery-object/) to wrap a collection of DOM elements:
+It returns an [array-like object](https://learn.jquery.com/using-jquery-core/jquery-object/) to **wrap** a collection of DOM elements:
 
 * has `length` property
 * refers to items by non-negative integer index
@@ -70,7 +70,8 @@ Many jQuery methods return the object to support the chaining pattern. For some 
   function renderFilter() {
     var name = 'filter';
 
-    return $(`<form name="${name}"></form>`)
+    return $('<form name=></form>')
+      .attr('name', name)
       .append(
         renderFilterOption(name, 'all', true),
         renderFilterOption(name, 'uncompleted', false),
