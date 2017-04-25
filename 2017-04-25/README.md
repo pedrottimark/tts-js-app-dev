@@ -60,23 +60,34 @@ Many jQuery methods return the object to support the chaining pattern. For some 
 
 * [attr](http://api.jquery.com/attr/)
 
-  * get the value of an attribute: `var value = $label.attr('for');`
-  * set the value of an attribute: `$label.attr('for', value);`
-  * set multiple attributes: `$input.attr({type: 'radio', name: name, value: value, id: value});`
+  * get the value of an attribute: `var name = $input.attr('name');`
+  * set the value of an attribute: `$input.attr('name', name);`
+  * set multiple attributes: `$input.attr({type: 'radio', name: name, value: value});`
 
 * [append](http://api.jquery.com/append/) arguments to the end of each element in the collection
 
   ```js
-  function renderFilterOption(name, value, checked) {
-    var $input = …;
-    var $label = …;
+  function renderFilter() {
+    var name = 'filter';
 
-    return $('<li></li>').append($input, $label);
+    return $(`<form name="${name}"></form>`)
+      .append(
+        renderFilterOption(name, 'all', true),
+        renderFilterOption(name, 'uncompleted', false),
+        renderFilterOption(name, 'completed', false)
+      );
   }
   ```
+
 * [prepend](http://api.jquery.com/prepend/) arguments to the beginning of each element in the collection
 
-* [replaceWith](http://api.jquery.com/replaceWith/) elements with the argument and return the set of elements that were removed.
+  ```js
+  function renderFilterOption(name, value, checked) {
+    var $input = …;
+
+    return $('<label></label>').text(value).prepend($input);
+  }
+  ```
 
 ## Events
 
@@ -93,7 +104,7 @@ var state = new State({
   todos: [
     {
       id: 0,
-      text: 'Write less',
+      text: 'Write less, do more',
       completed: true,
     },
     // …
@@ -155,7 +166,7 @@ Find all `/* comments */` and replace with jQuery methods to make the applicatio
 
 ## Challenge 4
 
-To lean toward JSX notation in React, here is a similar ECMAScript 2015 feature: **template literals**:
+To lean toward JSX notation in React, here is a similar ECMAScript 2015 feature: **template literals**.
 
 * enclosed in backticks
 * can contain single or double quote marks
@@ -166,14 +177,14 @@ You can replace some jQuery methods:
 
 ```js
 var name = 'filter';
-return $('<ul></ul>').addClass(name);
+var $form $('<form></form>').attr('name', name);
 ```
 
 with template literals:
 
 ```js
 var name = 'filter';
-var $ul = $(`<ul class="${name}"></ul>`); // <ul class="filter"></ul>
+var $form = $(`<form name="${name}"></form>`);
 ```
 
 Find all `/* comments */` and replace jQuery methods with template literals.
@@ -185,5 +196,7 @@ Read:
 * [How jQuery Works](https://learn.jquery.com/about-jquery/how-jquery-works/)
 * [The jQuery Object](https://learn.jquery.com/using-jquery-core/jquery-object/)
 * [$( document ).ready()](https://learn.jquery.com/using-jquery-core/document-ready/)
+
+To prepare for the next class, read a page about [Ajax](https://learn.jquery.com/ajax/) which has 5 links to child pages.
 
 Read at least 3 other pages of your choice from [jQuery Learning Center](https://learn.jquery.com/)

@@ -44,7 +44,7 @@ var renderTodos = (function (){
 
     return $(/* write a template literal to replace the following code */)
     /*
-    return $label =  $('<label></label>').text(value)
+    return $('<label></label>').text(value)
     */
       .prepend($input);
   }
