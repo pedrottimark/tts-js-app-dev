@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            //Get reference to the list element
+            var list = $('ul#userList');
+            console.log(list);
+
+            //Make a GET request for the items to render
+            $.get('http://jsonplaceholder.typicode.com/users', function (users) {
+                //Iterate over the response, adding elements to DOM
+                console.log(users);
+                users.forEach(function (user) {
+                    var li = $('<li></li>');
+                    li.text(user.name);
+                    list.append(li);
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Users</h1>
+    <ul id="userList"></ul>
+</body>
+
+</html>

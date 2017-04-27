@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            method: 'PUT',
+            url: 'http://jsonplaceholder.typicode.com/todos/1',
+            data: { completed: false, title: "Teach REST", userId: 1 },
+            complete: function (response) {
+                //handle response which usually includes the updated object.
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <h1>Put</h1>
+</body>
+
+</html>
