@@ -1,0 +1,17 @@
+{
+  "name": "02-eslint",
+  "version": "1.0.0",
+  "description": "ESLint is a tool for code quality",
+  "main": "src/root.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "invariant": "^2.2.2",
+    "jest": "^19.0.2"
+  },
+  "eslintConfig": {
+  }
+}

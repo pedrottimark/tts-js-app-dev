@@ -1,0 +1,38 @@
+{
+  "name": "03-webpack",
+  "version": "1.0.0",
+  "description": "webpack is a module bundler",
+  "main": "src/root.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint --cache src/*.js",
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "invariant": "^2.2.2",
+    "jest": "^19.0.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    },
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": "off",
+      "array-callback-return": "error",
+      "eol-last": "error",
+      "indent": [
+        "error",
+        2
+      ]
+    }
+  }
+}
