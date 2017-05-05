@@ -100,7 +100,7 @@ npm install --save-dev webpack
 2. Install loaders
 
    ```sh
-   install --save-dev style-loader css-loader
+   npm install --save-dev style-loader css-loader
    ```
 
 3. Add the following to `webpack.config.js`
