@@ -10,8 +10,15 @@
             document.readyState === "interactive" || document.readyState === "complete" ? callback() : document.addEventListener("DOMContentLoaded", callback);
         };
 
+        function fetchCheck(response){
+            if (response.status >= 400) throw new Error()
+
+            return response 
+        }
+
         domReady(function(){
             fetch('http://jsonplaceholder.typicode.com/todos')
+                .then(fetchCheck)
                 .then(function(result){
                     console.log(result)
                     return result.json();
