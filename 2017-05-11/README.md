@@ -1,4 +1,4 @@
-# ECMAScript 2015 Part 2
+# Lesson 14: ECMAScript 2015 Part 2
 
 Recommended resources when you need to learn more on the job:
 
