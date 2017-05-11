@@ -1,0 +1,15 @@
+{
+  "name": "01-react",
+  "version": "1.0.0",
+  "description": "Examples of ECMAScript 2015 in React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
+}
