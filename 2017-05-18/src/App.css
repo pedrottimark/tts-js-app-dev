@@ -1,0 +1,106 @@
+.TodoApp {
+  padding: 1rem;
+}
+
+.TodoApp,
+.TodoApp form[name="adder"] input,
+.TodoApp form[name="adder"] button[type="submit"] {
+  color: #333333; /* dark gray */
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.TodoApp h1 {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.TodoApp h1 strong {
+  color: #008000; /* green */
+}
+
+.TodoApp form[name="filter"] fieldset {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-style: none;
+  border-bottom: 1px solid #cccccc; /* light gray */
+  margin-bottom: 0.5rem;
+}
+
+.TodoApp form[name="filter"] label {
+  margin-left: 2rem;
+}
+
+.TodoApp form[name="filter"] label + label {
+  margin-left: 1.5rem;
+}
+
+.TodoApp form[name="filter"] input {
+  margin-right: 1rem;
+}
+
+.TodoApp form[name="filter"] label:nth-child(2) {
+  color: #008000; /* green */
+}
+
+.TodoApp form[name="filter"] label:nth-child(3) {
+  color: #666666; /* medium gray */
+  text-decoration: line-through;
+}
+
+.TodoApp .list {
+  list-style: none;
+}
+
+.TodoApp .list li {
+  display: flex;
+  align-items: baseline;
+}
+
+.TodoApp .list li svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+.TodoApp .list li.uncompleted {
+  color: #008000; /* green */
+}
+
+.TodoApp .list li.completed {
+  color: #666666; /* medium gray */
+}
+
+.TodoApp .list li.completed div {
+  text-decoration: line-through;
+}
+
+.TodoApp .list input {
+  border: none;
+  background-color: hsl(45, 100%, 90%); /* light yellow */
+}
+
+.TodoApp form[name="adder"] {
+  margin-top: 0.5rem;
+  border-top: 1px solid #cccccc; /* light gray */
+  padding-top: 0.5rem;
+}
+
+.TodoApp form[name="adder"] input {
+  margin-left: 2rem;
+  border: none;
+  color: #008000; /* green */
+  background-color: hsl(45, 100%, 90%); /* light yellow */
+}
+
+.TodoApp form[name="adder"] button[type="submit"] {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #cccccc; /* light gray */
+  color: #008000; /* green */
+  background-color: hsl(120, 100%, 90%); /* light green */
+}
