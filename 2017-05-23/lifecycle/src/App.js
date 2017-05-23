@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Lifecycle from "./Lifecycle"
+import Albums from "./Album"
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       inputValue: "test",
-      displayValue: "test2",
+      displayValue: 1,
       showDisplay: true,
     }
     this.onSet = this.onSet.bind(this)
@@ -16,8 +16,8 @@ class App extends Component {
   }
 
   onSet() {
-    this.setState(prev => Object.assign({}, prev, {
-      displayValue: prev.inputValue
+    this.setState(prevState => ({
+      displayValue: prevState.inputValue
     }))
   }
 
@@ -41,7 +41,10 @@ class App extends Component {
         <button onClick={this.onSet}>Set Display</button>
         <button onClick={this.onToggle}>Toggle Display</button>
         <h4>{this.state.showDisplay ? "Component Mounted" : "Component Not Mounted"}</h4>
-        {this.state.showDisplay && <Lifecycle message={this.state.displayValue} />}
+        {/*{this.state.showDisplay && <Albums id={this.state.displayValue} />}*/}
+        <Albums id="1"/>
+        <Albums id="2"/>
+        <Albums id="3"/>
       </div>
     );
   }
