@@ -40,7 +40,8 @@ class App extends Component {
         <input type="text" value={this.state.inputValue} onChange={this.onChange} />
         <button onClick={this.onSet}>Set Display</button>
         <button onClick={this.onToggle}>Toggle Display</button>
-        {this.state.showDisplay && <Lifecycle message={this.state.displayValue}/>}
+        <h4>{this.state.showDisplay ? "Component Mounted" : "Component Not Mounted"}</h4>
+        {this.state.showDisplay && <Lifecycle message={this.state.displayValue} />}
       </div>
     );
   }
