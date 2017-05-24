@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
 import Albums from "./Album"
+import Posts from "./Posts"
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      inputValue: "test",
+      inputValue: "2",
       displayValue: 1,
       showDisplay: true,
     }
@@ -28,9 +29,14 @@ class App extends Component {
   }
 
   onChange(event) {
-    this.setState({
-      inputValue: event.target.value
-    })
+    const value = event.target.value
+
+    if (Number(value) < 11) {
+      this.setState({
+        inputValue: value
+      })
+    }
+
   }
 
   render() {
@@ -41,10 +47,8 @@ class App extends Component {
         <button onClick={this.onSet}>Set Display</button>
         <button onClick={this.onToggle}>Toggle Display</button>
         <h4>{this.state.showDisplay ? "Component Mounted" : "Component Not Mounted"}</h4>
-        {/*{this.state.showDisplay && <Albums id={this.state.displayValue} />}*/}
-        <Albums id="1"/>
-        <Albums id="2"/>
-        <Albums id="3"/>
+        {this.state.showDisplay && <Albums id={this.state.displayValue} />}
+        {this.state.showDisplay && <Posts id={this.state.displayValue} />}
       </div>
     );
   }

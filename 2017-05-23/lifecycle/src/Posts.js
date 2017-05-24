@@ -1,41 +1,41 @@
 import React, { Component } from "react";
 
-export default class Albums extends Component {
+export default class Post extends Component {
     constructor() {
         super();
         this.state = {
-            albums: [],
+            posts: [],
         }
     }
 
     componentDidMount() {
         const { id } = this.props;
-        this.fetchAlbums(id)
+        this.getPosts(id);
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentWillReceiveProps(nextProps){
         const { id: oldId } = this.props;
         const { id: newId } = nextProps;
         if (oldId !== newId) {
-            this.fetchAlbums(newId)
+            this.getPosts(newId)
         }
     }
 
-    fetchAlbums(id) {
-        fetch("http://jsonplaceholder.typicode.com/albums?userId=" + id)
+    getPosts(id) {
+        fetch("http://jsonplaceholder.typicode.com/posts?userId=" + id)
             .then(res => res.json())
-            .then(albums => {
+            .then(posts => {
                 this.setState({
-                    albums
+                    posts
                 })
             })
     }
 
     render() {
         return (<div>
-            <h3>User id {this.props.id}'s albums</h3>
+            <h3>User id {this.props.id}'s posts</h3>
             <ul>
-                {this.state.albums.map(album => <li key={album.id}><a href="#">{album.title}</a></li>)}
+                {this.state.posts.map(post => <li key={post.id}>{post.title}</li>)}
             </ul>
         </div>)
     }
