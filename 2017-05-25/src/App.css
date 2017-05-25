@@ -1,0 +1,34 @@
+header {
+  padding: 1rem;
+  background-color: rgba(247, 223, 30, 0.8);
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+h1 strong {
+  color: #61dafb;
+}
+
+main {
+  padding: 1rem;
+  line-height: 1.42857; /* 10 / 7 */
+  background-color: rgba(247, 223, 30, 0.4);
+}
+
+h2, h3 {
+  font-size: 1.5rem;
+  line-height: 1;
+  padding-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.NoRoute {
+  color: rgba(247, 223, 30, 0.8);
+  background-color: #000000;
+}
